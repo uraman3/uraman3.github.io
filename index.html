@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Usha Raman — Senior Technical Program Manager</title>
+<meta name="description" content="Senior Technical Program Manager with 12+ years at Microsoft leading security, cloud, and AI infrastructure programs." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #ede8dc;
+    --bg-2: #e5dfd2;
+    --bg-3: #d9d2c4;
+    --border: rgba(90,65,40,0.12);
+    --border-hover: rgba(90,65,40,0.24);
+    --text: #1c1510;
+    --text-2: #6b5c48;
+    --text-3: #9e8e7c;
+    --accent: #7c3d1e;
+    --accent-dim: rgba(124,61,30,0.1);
+    --accent-glow: rgba(124,61,30,0.05);
+    --gold: #a0522d;
+    --gold-dim: rgba(160,82,45,0.1);
+    --radius: 10px;
+    --radius-sm: 6px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { opacity: 0.8; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(237,232,220,0.88);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 clamp(1.5rem, 5vw, 4rem);
+    height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.1rem; color: var(--text); letter-spacing: 0.02em; }
+  .nav-links { display: flex; align-items: center; gap: 1.75rem; }
+  .nav-links a { font-size: 0.875rem; color: var(--text-2); transition: color 0.2s; }
+  .nav-links a:hover { color: var(--text); opacity: 1; }
+  .nav-badge {
+    font-size: 0.75rem; font-family: 'DM Mono', monospace;
+    background: var(--accent-dim); color: var(--accent);
+    border: 1px solid rgba(124,61,30,0.25);
+    padding: 4px 12px; border-radius: 99px; letter-spacing: 0.02em;
+  }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 860px; margin: 0 auto; padding: 0 clamp(1.5rem, 5vw, 2rem); }
+  section { padding: 5rem 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+
+  .section-label {
+    font-family: 'DM Mono', monospace; font-size: 0.75rem;
+    color: var(--text-3); letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; color: var(--text); line-height: 1.2; }
+  h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: var(--text); }
+
+  /* ── HERO ── */
+  #hero { padding: 7rem 0 5rem; border-bottom: 1px solid var(--border); }
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace; font-size: 0.8rem;
+    color: var(--accent); letter-spacing: 0.08em;
+    margin-bottom: 1.25rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .hero-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
+  #hero h1 {
+    font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 7vw, 5rem);
+    font-weight: 300; line-height: 1.05; color: var(--text);
+    margin-bottom: 0.5rem; letter-spacing: -0.01em;
+  }
+  .hero-tagline {
+    font-family: 'DM Sans', sans-serif; font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--text-2); font-weight: 300; margin-bottom: 2rem;
+    letter-spacing: 0.01em;
+  }
+  .hero-tagline span { color: var(--text-3); margin: 0 0.4em; }
+  .hero-bio {
+    font-size: 1rem; color: var(--text-2); line-height: 1.8;
+    max-width: 640px; margin-bottom: 2.5rem;
+  }
+  .hero-bio strong { color: var(--text); font-weight: 400; }
+  .hero-links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.4em;
+    padding: 10px 20px; border-radius: var(--radius-sm);
+    font-size: 0.875rem; font-weight: 400; transition: all 0.2s;
+    border: 1px solid var(--border-hover); color: var(--text-2);
+    background: var(--bg-2);
+  }
+  .btn:hover { color: var(--text); background: var(--bg-3); opacity: 1; border-color: var(--border-hover); }
+  .btn-primary { background: var(--accent); color: var(--bg); border-color: transparent; }
+  .btn-primary:hover { background: #26bfad; opacity: 1; }
+  .btn svg { width: 15px; height: 15px; }
+
+  /* ── EXPERIENCE ── */
+  .exp-list { display: flex; flex-direction: column; gap: 0; }
+  .exp-item {
+    display: grid; grid-template-columns: 110px 1fr;
+    gap: 0 2rem; padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    position: relative;
+  }
+  .exp-item:first-child { border-top: none; }
+  .exp-years {
+    font-family: 'DM Mono', monospace; font-size: 0.78rem;
+    color: var(--text-3); padding-top: 4px; line-height: 1.6;
+  }
+  .exp-body {}
+  .exp-role { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+  .exp-company {
+    font-size: 0.875rem; color: var(--accent); margin-bottom: 0.875rem;
+    font-weight: 500;
+  }
+  .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  .exp-bullets li {
+    font-size: 0.9rem; color: var(--text-2); line-height: 1.65;
+    padding-left: 1.25em; position: relative;
+  }
+  .exp-bullets li::before { content: '—'; position: absolute; left: 0; color: var(--text-3); }
+  .exp-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.875rem; }
+  .tag {
+    font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    padding: 3px 9px; border-radius: 4px;
+    background: var(--bg-3); color: var(--text-3);
+    border: 1px solid var(--border);
+  }
+
+  /* ── PROJECTS ── */
+  .project-filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+  .filter-btn {
+    font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.03em;
+    padding: 5px 14px; border-radius: 99px; cursor: pointer;
+    border: 1px solid var(--border); background: transparent;
+    color: var(--text-3); transition: all 0.2s;
+  }
+  .filter-btn:hover, .filter-btn.active { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+  .project-card {
+    background: var(--bg-2); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1.5rem;
+    transition: border-color 0.2s, background 0.2s;
+    cursor: default;
+  }
+  .project-card:hover { border-color: var(--border-hover); background: var(--bg-3); }
+  .project-file {
+    font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    color: var(--text-3); margin-bottom: 0.75rem;
+  }
+  .project-card h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .project-card p { font-size: 0.875rem; color: var(--text-2); line-height: 1.65; margin-bottom: 1rem; }
+  .project-stat {
+    font-family: 'DM Mono', monospace; font-size: 0.75rem;
+    color: var(--accent); background: var(--accent-dim);
+    padding: 3px 9px; border-radius: 4px; display: inline-block; margin-bottom: 0.875rem;
+  }
+  .hidden { display: none; }
+
+  /* ── SKILLS ── */
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+  .skill-group {
+    background: var(--bg-2); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1.5rem;
+  }
+  .skill-group-label {
+    font-family: 'DM Mono', monospace; font-size: 0.75rem;
+    color: var(--text-3); letter-spacing: 0.06em; text-transform: uppercase;
+    margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;
+  }
+  .skill-group-label svg { width: 14px; height: 14px; color: var(--accent); }
+  .skill-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .skill-pill {
+    font-size: 0.82rem; padding: 4px 10px; border-radius: 4px;
+    background: var(--bg-3); color: var(--text-2);
+    border: 1px solid var(--border);
+  }
+
+  /* ── EDUCATION ── */
+  .edu-list { display: flex; flex-direction: column; gap: 0; }
+  .edu-item {
+    display: grid; grid-template-columns: 110px 1fr;
+    gap: 0 2rem; padding: 1.75rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .edu-item:first-child { border-top: none; }
+  .edu-year { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--text-3); padding-top: 4px; }
+  .edu-body h3 { font-size: 1rem; margin-bottom: 3px; }
+  .edu-body p { font-size: 0.875rem; color: var(--text-2); }
+  .edu-current {
+    font-family: 'DM Mono', monospace; font-size: 0.7rem;
+    color: var(--gold); background: var(--gold-dim);
+    border: 1px solid rgba(245,158,11,0.2);
+    padding: 2px 8px; border-radius: 99px; margin-left: 0.5rem; vertical-align: 2px;
+  }
+
+  /* ── CERTS ── */
+  .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.75rem; margin-top: 2.5rem; }
+  .cert-card {
+    background: var(--bg-2); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 1rem 1.25rem;
+  }
+  .cert-card p { font-size: 0.875rem; font-weight: 400; color: var(--text); margin-bottom: 3px; }
+  .cert-card small { font-size: 0.78rem; color: var(--text-3); font-family: 'DM Mono', monospace; }
+
+  /* ── AWARDS ── */
+  .awards-list { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2.5rem; }
+  .award-item {
+    display: flex; align-items: flex-start; gap: 1rem;
+    background: var(--bg-2); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 1rem 1.25rem;
+  }
+  .award-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+  .award-item p { font-size: 0.875rem; font-weight: 400; color: var(--text); margin-bottom: 2px; }
+  .award-item small { font-size: 0.8rem; color: var(--text-3); }
+
+  /* ── CONTACT ── */
+  #contact { border-bottom: none; }
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin-top: 2rem; }
+  .contact-card {
+    display: flex; align-items: center; gap: 1rem;
+    background: var(--bg-2); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1.25rem 1.5rem;
+    transition: border-color 0.2s;
+    color: var(--text-2); font-size: 0.875rem;
+  }
+  .contact-card:hover { border-color: var(--accent); color: var(--text); opacity: 1; }
+  .contact-card svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--accent); }
+  .contact-label { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--text-3); display: block; margin-bottom: 2px; }
+  .contact-value { color: var(--text); font-weight: 400; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center; padding: 2.5rem 1rem;
+    font-family: 'DM Mono', monospace; font-size: 0.75rem;
+    color: var(--text-3); border-top: 1px solid var(--border);
+  }
+
+  /* ── SCROLL HINT ── */
+  .scroll-hint {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-family: 'DM Mono', monospace; font-size: 0.75rem;
+    color: var(--text-3); margin-top: 3rem;
+    animation: bob 2s ease-in-out infinite;
+  }
+  @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .nav-links { gap: 1rem; }
+    .nav-links a:not(.nav-badge) { display: none; }
+    .exp-item, .edu-item { grid-template-columns: 1fr; gap: 0.25rem; }
+    .exp-years, .edu-year { padding-top: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">Usha Raman</span>
+  <div class="nav-links">
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+    <span class="nav-badge">Open to opportunities</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-eyebrow">Security · Cloud · AI Infrastructure</div>
+    <h1>Usha Raman</h1>
+    <div class="hero-tagline">
+      Technical Program Management <span>·</span> Cloud &amp; AI Security <span>·</span> Enterprise Scale
+    </div>
+    <p class="hero-bio">
+      Senior TPM with <strong>12+ years at Microsoft</strong> leading high-stakes programs across Azure Security, Cloud+AI infrastructure, and Experience &amp; Devices. Fluent in the full stack from <strong>GPU supply chains to GDPR compliance</strong> — I turn complex, cross-org engineering challenges into shipped products with measurable impact. Currently completing an <strong>MS in Information Security at Georgia Tech</strong>.
+    </p>
+    <div class="hero-links">
+      <a class="btn" href="mailto:usharaman2010@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+        Email me
+      </a>
+      <a class="btn" href="https://www.linkedin.com/in/ramanusha/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a class="btn" href="https://github.com/uraman3" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        GitHub
+      </a>
+    </div>
+    <div class="scroll-hint">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      Scroll to explore
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label">Work History</div>
+    <h2 style="margin-bottom:2.5rem">Experience</h2>
+    <div class="exp-list">
+
+      <div class="exp-item">
+        <div class="exp-years">2021<br/>—<br/>2025</div>
+        <div class="exp-body">
+          <div class="exp-role">Senior Technical Program Manager</div>
+          <div class="exp-company">Microsoft — Cloud + AI · Seattle, WA</div>
+          <ul class="exp-bullets">
+            <li>Defined product vision and KPIs for a supplier onboarding platform, driving 25% faster onboarding and 50% automation across 10+ ODM/OEM teams.</li>
+            <li>Owned roadmap for a Quality Management System delivering 90% data integration uplift, 75% quality score improvement, and $2M+ annual value across 6+ suppliers.</li>
+            <li>Led GPU capacity program for H100/H200 servers, onboarding Quanta as second source and strengthening Azure hardware supply chain resilience with NVIDIA.</li>
+            <li>Drove dual-source eMMC qualification (Kioxia, Kingston, WD) — redirected $400K+ budget, averted a Stop Ship risk, and secured $500K+ executive approval in 4 months.</li>
+            <li>Coordinated 30+ cross-regional teams to deliver Gen 8–9 product changes at TTGL &lt;3 days with zero P0/P1 escapes via Kubernetes and Azure DevOps CI/CD.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tag">Azure DevOps</span><span class="tag">Kubernetes</span><span class="tag">CI/CD</span>
+            <span class="tag">Supply Chain</span><span class="tag">Power BI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-years">2018<br/>—<br/>2020</div>
+        <div class="exp-body">
+          <div class="exp-role">Security Program Manager II</div>
+          <div class="exp-company">Microsoft — Experience &amp; Devices · Seattle, WA</div>
+          <ul class="exp-bullets">
+            <li>Enabled 100% fleet vulnerability visibility by automating risk detection across containerized Kubernetes workloads with Azure DevOps dashboards.</li>
+            <li>Delivered enterprise-scale security compliance automation across 3,000+ services, achieving 75% compliance improvement and measurable MTTR gains.</li>
+            <li>Led CXO headcount planning system delivering cost-per-head automation and hiring analytics for evidence-based OPEX decisions across Azure programs.</li>
+            <li>Drove Chrome SameSite cookie policy remediation to reduce GDPR/CCPA exposure and strengthen web authentication workflows.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tag">Kubernetes</span><span class="tag">Azure Security</span><span class="tag">GDPR</span>
+            <span class="tag">Compliance</span><span class="tag">Geneva</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-years">2013<br/>—<br/>2018</div>
+        <div class="exp-body">
+          <div class="exp-role">Technical Program Manager II</div>
+          <div class="exp-company">Microsoft — Azure Security · Seattle, WA</div>
+          <ul class="exp-bullets">
+            <li>Orchestrated company-wide response to a critical identity vulnerability using the SSIRP playbook, coordinating engineering, legal, and compliance teams.</li>
+            <li>Oversaw company-wide PAM modernization using Azure AD PIM Just-In-Time access, achieving 97–100% standing privilege reduction ahead of audit schedule.</li>
+            <li>Achieved 100% GDPR and Annual Privacy Review compliance, eliminating credential exposure risks.</li>
+            <li>Implemented Google Certificate Transparency (WebPKI) to reduce SSL abuse and strengthen fraud prevention.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tag">Azure AD PIM</span><span class="tag">IAM</span><span class="tag">WebPKI</span>
+            <span class="tag">SSIRP</span><span class="tag">Privacy</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-years">2012<br/>—<br/>2013</div>
+        <div class="exp-body">
+          <div class="exp-role">Technical Program Manager</div>
+          <div class="exp-company">Prime 8 Consulting @ Microsoft · Seattle, WA</div>
+          <ul class="exp-bullets">
+            <li>Managed Agile DevOps teams of 20+ as Product Owner and Scrum Master, improving security posture 60% through risk-based policy enforcement.</li>
+            <li>Secured WebTrust certification by aligning with external auditors on 140+ security controls.</li>
+            <li>Modernized ADFS sign-in experience across cloud and on-prem, raising CSAT by 18% and reducing auth tickets by 22%.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tag">Agile / Scrum</span><span class="tag">ADFS</span><span class="tag">WebTrust</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-years">2009<br/>—<br/>2012</div>
+        <div class="exp-body">
+          <div class="exp-role">Lead Systems Engineer</div>
+          <div class="exp-company">Motorola — Enterprise Mobility Solutions · Seattle, WA</div>
+          <ul class="exp-bullets">
+            <li>Owned product lifecycle for wireless voice/data solutions enabling $5M–$20M in annual revenue.</li>
+            <li>Led end-to-end communications system design for public safety dispatch programs (Port of Seattle, TriMeT, Pierce Transit, WA State PD) across 50+ licensed 800 MHz sites.</li>
+            <li>Improved customer satisfaction by 30% by introducing TL 9000 / SEI-CMM standardized processes.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tag">RF Engineering</span><span class="tag">Systems Design</span><span class="tag">TL 9000</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label">Key Initiatives</div>
+    <h2 style="margin-bottom:1.5rem">Projects &amp; Achievements</h2>
+
+    <div class="project-filters">
+      <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
+      <button class="filter-btn" onclick="filterProjects('security', this)">Security</button>
+      <button class="filter-btn" onclick="filterProjects('cloud', this)">Cloud &amp; AI</button>
+      <button class="filter-btn" onclick="filterProjects('compliance', this)">Compliance</button>
+    </div>
+
+    <div class="projects-grid" id="projects-grid">
+
+      <div class="project-card" data-tags="cloud">
+        <div class="project-file">quality-management-system.py</div>
+        <h3>Quality Management System</h3>
+        <span class="project-stat">$2M+ annual value</span>
+        <p>User-centered platform replacing fragmented engineering workflows across 6+ ODM/OEM suppliers with real-time dashboards and integrated data pipelines.</p>
+        <div class="exp-tags">
+          <span class="tag">Azure</span><span class="tag">Power BI</span><span class="tag">KQL</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="cloud">
+        <div class="project-file">gpu-capacity-program.py</div>
+        <h3>GPU Infrastructure Capacity</h3>
+        <span class="project-stat">H100 / H200 Fleet</span>
+        <p>Onboarded Quanta as second-source for NVIDIA H100/H200 servers; defined test strategies and capacity allocation processes with NVIDIA and OEM partners for Azure hardware.</p>
+        <div class="exp-tags">
+          <span class="tag">NVIDIA</span><span class="tag">OEM/ODM</span><span class="tag">Supply Chain</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="security">
+        <div class="project-file">pam-modernization.py</div>
+        <h3>PAM Modernization — JIT Access</h3>
+        <span class="project-stat">97–100% privilege reduction</span>
+        <p>Company-wide Privileged Access Management overhaul transitioning to Just-In-Time access with Azure AD PIM, closing all audit findings ahead of schedule.</p>
+        <div class="exp-tags">
+          <span class="tag">Azure AD PIM</span><span class="tag">IAM</span><span class="tag">Audit</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="security compliance">
+        <div class="project-file">security-compliance-automation.py</div>
+        <h3>Security Compliance Automation</h3>
+        <span class="project-stat">75% compliance uplift · 3,000+ services</span>
+        <p>Enterprise-scale automated compliance solution via Azure DevOps, Kubernetes, and Geneva — streamlining deployments, monitoring, and reporting at massive scale.</p>
+        <div class="exp-tags">
+          <span class="tag">Kubernetes</span><span class="tag">Azure DevOps</span><span class="tag">Geneva</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="compliance">
+        <div class="project-file">webtrust-certification.py</div>
+        <h3>WebTrust Certification</h3>
+        <span class="project-stat">140+ security controls</span>
+        <p>Aligned with external auditors to achieve WebTrust certification, reinforcing digital certificate trust and enabling PKI compliance across Microsoft's certification authority.</p>
+        <div class="exp-tags">
+          <span class="tag">WebPKI</span><span class="tag">CT Logs</span><span class="tag">Audit</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="cloud">
+        <div class="project-file">emmc-qualification.py</div>
+        <h3>Dual-Source eMMC Qualification</h3>
+        <span class="project-stat">$500K+ exec approval · Stop Ship averted</span>
+        <p>Qualified Kioxia, Kingston, and Western Digital across Intel Gen 8/9 platforms — redirected $400K+ budget and delivered in 4 months to avert a critical supply risk.</p>
+        <div class="exp-tags">
+          <span class="tag">Firmware</span><span class="tag">BIOS/BMC</span><span class="tag">Procurement</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label">Competencies</div>
+    <h2 style="margin-bottom:2rem">Skills</h2>
+    <div class="skills-grid">
+
+      <div class="skill-group">
+        <div class="skill-group-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Program &amp; Tools
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill">Agile</span><span class="skill-pill">Scrum</span>
+          <span class="skill-pill">SAFe</span><span class="skill-pill">OKRs &amp; KPIs</span>
+          <span class="skill-pill">Azure DevOps</span><span class="skill-pill">Jira</span>
+          <span class="skill-pill">Power BI</span><span class="skill-pill">GitHub</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          Technical
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill">Azure Cloud</span><span class="skill-pill">Python</span>
+          <span class="skill-pill">KQL (Kusto)</span><span class="skill-pill">SQL</span>
+          <span class="skill-pill">Kubernetes</span><span class="skill-pill">Active Directory</span>
+          <span class="skill-pill">BIOS/BMC/Firmware</span><span class="skill-pill">Agentic AI</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Security &amp; Compliance
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill">IAM / PIM</span><span class="skill-pill">GDPR / CCPA</span>
+          <span class="skill-pill">SSIRP</span><span class="skill-pill">WebTrust / PKI</span>
+          <span class="skill-pill">Vuln. Management</span><span class="skill-pill">Threat Assessment</span>
+          <span class="skill-pill">Privacy Review</span><span class="skill-pill">Risk Management</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <div class="section-label">Academic Background</div>
+    <h2 style="margin-bottom:2rem">Education</h2>
+
+    <div class="edu-list">
+      <div class="edu-item">
+        <div class="edu-year">Expected<br/>2026</div>
+        <div class="edu-body">
+          <h3>MS, Information Security <span class="edu-current">In Progress</span></h3>
+          <p>Georgia Institute of Technology · Atlanta, GA</p>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-year">Prior</div>
+        <div class="edu-body">
+          <h3>BS, Microbiology</h3>
+          <p>University of Mumbai · Mumbai, India</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:3rem">
+      <div class="section-label">Credentials</div>
+      <div class="certs-grid">
+        <div class="cert-card">
+          <p>PMP</p>
+          <small>Project Management Institute</small>
+        </div>
+        <div class="cert-card">
+          <p>Certified Scrum Master</p>
+          <small>Scrum Alliance</small>
+        </div>
+        <div class="cert-card">
+          <p>CompTIA Network+ CE</p>
+          <small>CompTIA</small>
+        </div>
+        <div class="cert-card">
+          <p>Lean Six Sigma White Belt</p>
+          <small>Microsoft Internal</small>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:3rem">
+      <div class="section-label">Recognition</div>
+      <div class="awards-list">
+        <div class="award-item">
+          <div class="award-icon">🏆</div>
+          <div>
+            <p>High Availability WebTrust Migration to HRE</p>
+            <small>Microsoft · Aug 2017</small>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-icon">🏆</div>
+          <div>
+            <p>On Prem RMS to Azure Migration and Key Transition</p>
+            <small>Microsoft · Feb 2017</small>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-icon">🏆</div>
+          <div>
+            <p>Improve Azure AD Security — Service Account Policy Enforcement</p>
+            <small>Microsoft · Sep 2016</small>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-icon">🏆</div>
+          <div>
+            <p>Infrastructure Resiliency — Smart Card Cross Forest Enrollment</p>
+            <small>Microsoft · Sep 2015</small>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-icon">🏆</div>
+          <div>
+            <p>Nokia Devices and Services Business</p>
+            <small>Microsoft · Sep 2014</small>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-icon">🏆</div>
+          <div>
+            <p>Streamline Login Experience (SSO and MFA)</p>
+            <small>Microsoft · Sep 2013</small>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-icon">🏅</div>
+          <div>
+            <p>Multiple Bravo / High Five Awards (2010–2012)</p>
+            <small>Motorola Solutions · Sep 2012 · Recognition for project &amp; leadership activities</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label">Get in Touch</div>
+    <h2>Contact</h2>
+    <p style="color:var(--text-2); margin-top:0.75rem; max-width:520px;">
+      Open to full-time roles, contract engagements, and conversations about security, cloud infrastructure, or AI programs.
+    </p>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:usharaman2010@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+        <div>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">usharaman2010@gmail.com</span>
+        </div>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/ramanusha/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <div>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/ramanusha</span>
+        </div>
+      </a>
+      <a class="contact-card" href="https://github.com/uraman3" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        <div>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/uraman3</span>
+        </div>
+      </a>
+      <a class="contact-card" href="tel:+14258304096">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div>
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">425.830.4096</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Usha Raman · 2026 · Built with HTML &amp; CSS</p>
+</footer>
+
+<script>
+  function filterProjects(category, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.project-card').forEach(card => {
+      const tags = card.dataset.tags || '';
+      if (category === 'all' || tags.includes(category)) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
