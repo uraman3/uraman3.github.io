@@ -70,28 +70,36 @@
   section:last-of-type { border-bottom: none; }
 
   .section-label {
-    font-family: 'DM Mono', monospace; font-size: 0.75rem;
-    color: var(--text-3); letter-spacing: 0.1em; text-transform: uppercase;
-    margin-bottom: 2.5rem;
-    display: flex; align-items: center; gap: 0.75rem;
+    font-family: 'DM Mono', monospace; font-size: 0.78rem;
+    color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    display: block;
   }
-  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .section-label::after { display: none; }
 
-  h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; color: var(--text); line-height: 1.2; }
+  .section-heading-wrap { margin-bottom: 2.5rem; }
+  .section-heading-wrap h2 { margin-bottom: 0.6rem; }
+  .section-heading-wrap .heading-rule {
+    display: block; width: 52px; height: 3px;
+    background: var(--accent); border-radius: 2px;
+  }
+
+  h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 5vw, 3.2rem); font-weight: 700; color: var(--text); line-height: 1.1; }
   h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: var(--text); }
 
   /* ── HERO ── */
   #hero { padding: 7rem 0 5rem; border-bottom: 1px solid var(--border); }
   .hero-eyebrow {
-    font-family: 'DM Mono', monospace; font-size: 0.8rem;
-    color: var(--accent); letter-spacing: 0.08em;
+    font-family: 'DM Mono', monospace; font-size: 0.85rem;
+    color: var(--accent); letter-spacing: 0.06em;
     margin-bottom: 1.25rem;
     display: flex; align-items: center; gap: 0.5rem;
+    flex-wrap: wrap;
   }
-  .hero-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
+  .hero-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--accent); flex-shrink: 0; }
   #hero h1 {
-    font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 7vw, 5rem);
-    font-weight: 300; line-height: 1.05; color: var(--text);
+    font-family: 'Cormorant Garamond', serif; font-size: clamp(3.2rem, 8vw, 6rem);
+    font-weight: 700; line-height: 1.05; color: var(--text);
     margin-bottom: 0.5rem; letter-spacing: -0.01em;
   }
   .hero-tagline {
@@ -142,7 +150,7 @@
     font-size: 0.9rem; color: var(--text-2); line-height: 1.65;
     padding-left: 1.25em; position: relative;
   }
-  .exp-bullets li::before { content: '—'; position: absolute; left: 0; color: var(--text-3); }
+  .exp-bullets li::before { content: '•'; position: absolute; left: 0; color: var(--accent); font-size: 0.9em; }
   .exp-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.875rem; }
   .tag {
     font-family: 'DM Mono', monospace; font-size: 0.72rem;
@@ -297,7 +305,7 @@
 <!-- HERO -->
 <section id="hero">
   <div class="container">
-    <div class="hero-eyebrow">Security · Cloud · AI Infrastructure</div>
+    <div class="hero-eyebrow">AI Infrastructure · Cloud &amp; Security · Data Engineering · Supply Chain · Delivering Scalable Solutions with Continuous Improvement</div>
     <h1>Usha Raman</h1>
     <div class="hero-tagline">
       Technical Program Management <span>·</span> Cloud &amp; AI Security <span>·</span> Enterprise Scale
@@ -329,8 +337,11 @@
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="container">
-    <div class="section-label">Work History</div>
-    <h2 style="margin-bottom:2.5rem">Experience</h2>
+    <div class="section-heading-wrap">
+      <div class="section-label">Work History</div>
+      <h2>Experience</h2>
+      <span class="heading-rule"></span>
+    </div>
     <div class="exp-list">
 
       <div class="exp-item">
@@ -449,8 +460,11 @@
 <!-- PROJECTS -->
 <section id="projects">
   <div class="container">
-    <div class="section-label">Key Initiatives</div>
-    <h2 style="margin-bottom:1.5rem">Projects &amp; Achievements</h2>
+    <div class="section-heading-wrap">
+      <div class="section-label">Key Initiatives</div>
+      <h2>Projects &amp; Achievements</h2>
+      <span class="heading-rule"></span>
+    </div>
 
     <div class="project-filters">
       <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
@@ -528,8 +542,11 @@
 <!-- SKILLS -->
 <section id="skills">
   <div class="container">
-    <div class="section-label">Competencies</div>
-    <h2 style="margin-bottom:2rem">Skills</h2>
+    <div class="section-heading-wrap">
+      <div class="section-label">Competencies</div>
+      <h2>Skills</h2>
+      <span class="heading-rule"></span>
+    </div>
     <div class="skills-grid">
 
       <div class="skill-group">
@@ -578,8 +595,11 @@
 <!-- EDUCATION -->
 <section id="education">
   <div class="container">
-    <div class="section-label">Academic Background</div>
-    <h2 style="margin-bottom:2rem">Education</h2>
+    <div class="section-heading-wrap">
+      <div class="section-label">Academic Background</div>
+      <h2>Education</h2>
+      <span class="heading-rule"></span>
+    </div>
 
     <div class="edu-list">
       <div class="edu-item">
@@ -681,8 +701,11 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
-    <div class="section-label">Get in Touch</div>
-    <h2>Contact</h2>
+    <div class="section-heading-wrap">
+      <div class="section-label">Get in Touch</div>
+      <h2>Contact</h2>
+      <span class="heading-rule"></span>
+    </div>
     <p style="color:var(--text-2); margin-top:0.75rem; max-width:520px;">
       Open to full-time roles, contract engagements, and conversations about security, cloud infrastructure, or AI programs.
     </p>
@@ -708,13 +731,7 @@
           <span class="contact-value">github.com/uraman3</span>
         </div>
       </a>
-      <a class="contact-card" href="tel:+14258304096">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <div>
-          <span class="contact-label">Phone</span>
-          <span class="contact-value">425.830.4096</span>
-        </div>
-      </a>
+
     </div>
   </div>
 </section>
